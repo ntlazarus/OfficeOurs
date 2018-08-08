@@ -1,0 +1,31 @@
+<div>
+    <h1>Create New Account</h1>
+    
+    Account Information:
+    <br>
+    
+      <form class = "form-control" ng-submit="login()"> 
+        <input  ng-model = "firstname" type = "text" placeholder= "First Name">
+        <br>
+        <input  ng-model = "lastname" type = "text" placeholder= "Last Name">
+        <br>
+        <input  ng-model = "username" type = "text" placeholder= "Username">
+        <br> 
+        <input ng-model = "password" type = "password" placeholder = "Password">
+        <br> 
+        <input ng-model = "phone" type = "password" placeholder = "Phone Number">
+
+        <br>
+        <button class = "btn-primary" >Login </button>
+        <br>
+        <span ng-show="invalidFlag" class="invalid">Password too short<br></span>
+        <a>Forgot Password?</a>
+    </form>  
+    
+    <h2>Current Users:</h2>
+    <ul>
+      <li ng-repeat="user in users"><a>{{user.name}}</a>
+      <br>{{user.college}} - {{user.city}}</li>
+    </ul>    
+
+</div>
